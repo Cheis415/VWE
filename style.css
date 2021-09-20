@@ -2,7 +2,7 @@
 
 :root {
   --main-bg-color: #000000;
-  --accent-color: #8B0000;
+  --accent-color: #c45335;
   --text-color: #dedede;
 } 
 
@@ -190,11 +190,13 @@ padding: 0 !important;
   position: relative;
   display: flex;
   background-color: var(--main-bg-color);
-  justify-content: space-evenly;
+  justify-content: space-between !important;
   align-items: center;
   width: 100%;
   z-index: 50;
 }
+
+
 
 .hidden {
   display: none;
@@ -286,20 +288,17 @@ padding: 0 !important;
  
 }
 
-
 .sortScroll1 {
+  margin-left: 70px !important;
   border: 1px solid var(--accent-color);
-  left: 17%;
-  width: 14%;
   letter-spacing: 1px;
   height: 100%;
   cursor: pointer;
 }
 
 .sortScroll2 {
+  margin-left: 70px !important;
   border: 1px solid var(--accent-color);
-  left: 17%;
-  width: 14%;
   letter-spacing: 1px;
   height: 100%;
   cursor: pointer;
@@ -323,6 +322,7 @@ padding: 0 !important;
   letter-spacing: 10px;
   padding: 0;
   margin: 0;
+  border-bottom: 7px solid var(--accent-color);
   font-family: 'Bebas Neue', cursive;
   color: var(--text-color);
 }
@@ -334,7 +334,7 @@ padding: 0 !important;
   letter-spacing: 4px;
   font-size: 1.5em;
   padding: 0;
-  margin: 0;
+  margin: 10px 0;
   color: var(--text-color);
 }
 

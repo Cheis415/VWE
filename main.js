@@ -187,6 +187,8 @@ const smoothScroll = (dest) => {
 	});
 };
 
+//Functions for scroll button in the sort bar
+
 const showButtonUp = () => {
 	document.querySelector('.sortScroll1').classList.remove('hide');
 	document.querySelector('.sortScroll2').classList.add('hide');
@@ -196,8 +198,10 @@ const showButtonDwn = () => {
 	document.querySelector('.sortScroll2').classList.remove('hide');
 	document.querySelector('.sortScroll1').classList.add('hide');
 };
+
 document.addEventListener('scroll', (e) =>
 	window.scrollY < 100 ? showButtonUp() : showButtonDwn()
 );
+
 //Call fetchdata on load in order to fill div with cards on load
 fetchData();
