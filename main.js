@@ -18,7 +18,7 @@ const fetchData = (callBack) => {
 							<li>- ${product.bottle_size}</li>
 						</ul>
 					</div>
-					<img id="image" src=${productUrl} class="card-img-top" alt="bottle of ${product.manufacturer} ${product.varietal}">
+					<img id="image" src=${productUrl} class="card-img-top" alt="bottle of ${product.manufacturer} ${product.varietal}"/>
 				</div>`;
 			}
 
@@ -63,13 +63,13 @@ const byVintageDesc = (a, b) => {
 
 const orderByVintageAsc = () => {
 	document
-		.getElementById('vintageUp')
+		.getElementsByClassName('vintageUp')
 		.addEventListener('click', fetchData(byVintageAsc));
 };
 
 const orderByVintageDesc = () => {
 	document
-		.getElementById('vintageDwn')
+		.getElementsByClassName('vintageDwn')
 		.addEventListener('click', fetchData(byVintageDesc));
 };
 
@@ -91,13 +91,13 @@ const byVarietalDesc = (a, b) => {
 
 const orderByVarietalAsc = () => {
 	document
-		.getElementById('varietalUp')
+		.getElementsByClassName('varietalUp')
 		.addEventListener('click', fetchData(byVarietalAsc));
 };
 
 const orderByVarietalDesc = () => {
 	document
-		.getElementById('varietalDwn')
+		.getElementsByClassName('varietalDwn')
 		.addEventListener('click', fetchData(byVarietalDesc));
 };
 
@@ -119,13 +119,13 @@ const byPriceDesc = (a, b) => {
 
 const orderByPriceAsc = () => {
 	document
-		.getElementById('priceUp')
+		.getElementsByClassName('priceUp')
 		.addEventListener('click', fetchData(byPriceAsc));
 };
 
 const orderByPriceDesc = () => {
 	document
-		.getElementById('priceDwn')
+		.getElementsByClassName('priceDwn')
 		.addEventListener('click', fetchData(byPriceDesc));
 };
 
@@ -147,13 +147,13 @@ const byAbvDesc = (a, b) => {
 
 const orderByAbvAsc = () => {
 	document
-		.getElementById('abvUp')
+		.getElementsByClassName('abvUp')
 		.addEventListener('click', fetchData(byAbvAsc));
 };
 
 const orderByAbvDesc = () => {
 	document
-		.getElementById('abvDwn')
+		.getElementsByClassName('abvDwn')
 		.addEventListener('click', fetchData(byAbvDesc));
 };
 

@@ -1,539 +1,547 @@
 /******************************************** Utility styles **********************************/
 
 :root {
-  --main-bg-color: #000000;
-  --accent-color: #c45335;
-  --text-color: #dedede;
-} 
+	--main-bg-color: #000000;
+	--accent-color: #c45335;
+	--text-color: #dedede;
+}
 
-*::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 .container-fluid {
-  max-width: 2000px !important;
+	max-width: 2000px !important;
 }
 
 html {
-  width: 100vw;
-  overflow-x: hidden;
-  margin: 0 auto;
+	width: 100vw;
+	overflow-x: hidden;
+	margin: 0 auto;
 }
 
-html, * {
-  
-scroll-behavior: smooth; 
-  line-height: 1.2; 
-  -webkit-text-size-adjust: 100%; 
-  max-width: 2000px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, sans-serif;
+html,
+* {
+	scroll-behavior: smooth;
+	line-height: 1.2;
+	-webkit-text-size-adjust: 100%;
+	max-width: 2000px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu,
+		'Helvetica Neue', Helvetica, sans-serif;
 }
 
 /******************************************** Nav styles **********************************/
 
 .navbar {
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
-  transition: top 0.3s;
-  max-width: 2000px !important;
-  z-index: 40;
-  background-color: var(--main-bg-color) !important;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: top 0.3s;
+	max-width: 2000px !important;
+	z-index: 40;
+	background-color: var(--main-bg-color) !important;
 }
 
 .navbar-brand {
-  color: var(--text-color) !important;
-  letter-spacing: 3px !important;
+	color: var(--text-color) !important;
+	letter-spacing: 3px !important;
 }
 
 .navbar-collapse {
-  overflow: hidden !important;
-  width: 100%;
-  max-width: 2000px !important;
+	overflow: hidden !important;
+	width: 100%;
+	max-width: 2000px !important;
 }
 
 .nav-link {
-  color: var(--text-color) !important;
-  letter-spacing: 3px !important;
+	color: var(--text-color) !important;
+	letter-spacing: 3px !important;
 }
 
 .nav-link:hover {
-  color: var(--accent-color) !important;
-  border-bottom: 2px solid var(--accent-color);
+	color: var(--accent-color) !important;
+	border-bottom: 1.5px solid var(--accent-color);
 }
- .active {
-  color: var(--text-color) !important;
+.active {
+	color: var(--text-color) !important;
 }
 
 .navbar-toggler-icon {
-  color: var(--text-color) !important;
+	color: var(--text-color) !important;
 }
 
 #navbarSupportedContent {
-  justify-content: flex-end !important;
-  justify-self: flex-end !important;
-  align-items: flex-end !important;
-  position: relative;
-  left: 80%;
+	justify-content: flex-end !important;
+	justify-self: flex-end !important;
+	align-items: flex-end !important;
+	position: relative;
+	left: 80%;
 }
 
 /******************************************** Landing page styles **********************************/
 
 .landing {
-  position: relative;
-  height: 93vh;
-  display: inline-block;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  max-width: 2000px;
-  width: 100%;
+	position: relative;
+	height: 93vh;
+	display: inline-block;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	max-width: 2000px;
+	width: 100%;
 }
 
 .overlay {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0, 0.5);
-  -moz-transition: all .2s linear;
-  -webkit-transition: all .2s linear;
-  -ms-transition: all .2s linear;
-  -o-transition: all .2s linear;
-  transition: all .2s linear;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0.5);
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 
-.landing h1  {
-  position: relative;
-  font-size: 7em;
-  letter-spacing: 10px;
-  padding: 0;
-  margin: 0;
-  font-family: 'Bebas Neue', cursive;
-  color: var(--text-color);
-  border-bottom: 7px solid var(--accent-color);
+.landing h1 {
+	position: relative;
+	font-size: 7em;
+	letter-spacing: 10px;
+	font-family: 'Bebas Neue', cursive;
+	color: var(--text-color);
+	border-bottom: 7px solid var(--accent-color);
 }
 
 .landing h3 {
-  position: relative;
-  font-family: 'Bebas Neue', cursive;
-  letter-spacing: 6px;
-  font-size: 3em;
-  padding: 0;
-  margin: 0;
-  color: var(--text-color);
+	position: relative;
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 6px;
+	font-size: 3em;
+	color: var(--text-color);
 }
 
 /******************************************** Card styles **********************************/
 
 #image {
-  width: 100px;
-  height: 300px;
+	width: 100px;
+	height: 300px;
 }
 
 #cardsContainer {
-  display: flex;
-  padding: 20px;
-  width: 100%;
-  background-color: #eeeeee;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	padding: 20px;
+	width: 100%;
+	background-color: #eeeeee;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .cards {
-  background-color: var(--text-color);
-  width: 22rem !important;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 10px;
-  padding: 10px;
+	background-color: var(--text-color);
+	width: 22rem !important;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin: 10px;
+	padding: 10px;
 }
 
 .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  text-align: start;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	text-align: start;
 }
 
 .card-title {
-  border-bottom: 2px solid var(--main-bg-color);
-  margin: 0px 0px 2rem 0;
+	border-bottom: 2px solid var(--main-bg-color);
+	margin: 0px 0px 2rem 0;
 }
 
 .card-body h3 {
-  letter-spacing: 2px;
-  font-size: 1.5em;
-} 
+	letter-spacing: 2px;
+	font-size: 1.5em;
+}
 
 .card-body ul {
-margin: 0 !important;
-padding: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 .card-body ul li {
-  margin: 2px;
-  font-weight: 700;
-  padding: 2px;
-  list-style: none;
+	margin: 2px;
+	font-weight: 700;
+	padding: 2px;
+	list-style: none;
 }
 
 /******************************************** Sort bar styles **********************************/
 
 .sort-bar {
-  position: relative;
-  display: flex;
-  background-color: var(--main-bg-color);
-  justify-content: space-evenly !important;
-  align-items: center;
-  max-width: 2000px !important;
-  width: 100%;
-  z-index: 50;
+	position: relative;
+	display: flex;
+	background-color: var(--main-bg-color);
+	justify-content: space-evenly !important;
+	align-items: center;
+	max-width: 2000px !important;
+	width: 100%;
+	z-index: 50;
 }
 
 .hidden-bar {
-  justify-content: center !important;
+	justify-content: center !important;
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 .dropdown-item {
-  color: var(--text-color) !important;
-  cursor: pointer;
-  background-color: var(--main-bg-color) !important;
+	color: var(--text-color) !important;
+	cursor: pointer;
+	background-color: var(--main-bg-color) !important;
 }
 
 .dropdown-item:hover {
-  color: var(--accent-color) !important;
-  border-bottom: 2px solid var(--accent-color);
+	color: var(--accent-color) !important;
+	border-bottom: 2px solid var(--accent-color);
 }
 
 .dropdown-menu {
-  background-color: var(--main-bg-color) !important;
-  z-index: 1000;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: var(--main-bg-color) !important;
+	z-index: 1000;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .sort-bar button {
-  padding: 5px 10px;
-  cursor: pointer;
-  margin: 10px;
-  color: var(--text-color) !important;
-  font-weight: bold;
-  background-color: transparent;
-  border: 1px solid var(--text-color);
-  border-radius: 4px;
-  letter-spacing: 3px;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin: 10px;
+	color: var(--text-color) !important;
+	font-weight: bold;
+	background-color: transparent;
+	border: 1px solid var(--text-color);
+	border-radius: 4px;
+	letter-spacing: 3px;
 }
 
 .sort-bar button:hover {
-  color: var(--accent-color) !important;
-  border: 1px solid var(--accent-color) !important;
-
+	color: var(--accent-color) !important;
+	border: 1px solid var(--accent-color) !important;
 }
 
 .sort-bar p {
-  padding: 5px 10px;
-  margin: 10px;
-  color: var(--text-color);
-  font-weight: bold;
-  letter-spacing: 3px;
+	padding: 5px 10px;
+	margin: 10px;
+	color: var(--text-color);
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.sortBtn {
+	margin: 10px !important;
+	border: 1px solid var(--accent-color) !important;
+	background-color: var(--main-bg-color) !important;
+	color: var(--text-color) !important;
+}
+
+.sortBtn:hover {
+	margin: 10px !important;
+	border: 1px solid var(--accent-color) !important;
+	background-color: var(--main-bg-color) !important;
+	color: var(--accent-color) !important;
 }
 
 .btn {
-  margin: 10px !important;
-  background-color: var(--main-bg-color) !important;
-  color: var(--text-color) !important;
+	margin: 10px !important;
+	background-color: var(--main-bg-color) !important;
+	color: var(--text-color) !important;
+}
+
+.btn:hover {
+	margin: 10px !important;
+	background-color: var(--main-bg-color) !important;
+	color: var(--accent-color) !important;
 }
 
 .offcanvas.show {
-  background-color: var(--main-bg-color) !important;
+	background-color: var(--main-bg-color) !important;
 }
 
 .offcanvas-header {
-  color: var(--text-color);
-  width: 100%;
+	color: var(--text-color);
+	width: 100%;
 }
 
 .side {
-  margin-bottom: 75px;
+	margin-bottom: 75px;
 }
 
 .side:nth-child(1) {
-  margin-top: 75px;
+	margin-top: 75px;
 }
 
 .overlay2 {
-  width: 100%;
-  height: 100%;
-  
+	width: 100%;
+	height: 100%;
 }
 
 .sidePic {
-  width: 80%;
-  height: auto;
-  border-radius: 10px;
-  background-image: url("./images/pexels-breakingpic-3044.jpg");
-  background-size: cover;
-  filter: brightness(70%);
- 
+	width: 80%;
+	height: auto;
+	border-radius: 10px;
+	background-image: url('./images/pexels-breakingpic-3044.jpg');
+	background-size: cover;
+	filter: brightness(70%);
 }
 
 .sortScroll1 {
-  margin-left: 70px !important;
-  border: 1px solid var(--accent-color);
-  letter-spacing: 1px;
-  height: 100%;
-  cursor: pointer;
+	border: 1px solid var(--accent-color);
+	letter-spacing: 1px;
+	height: 100%;
+	cursor: pointer;
 }
 
 .sortScroll2 {
-  margin-left: 70px !important;
-  border: 1px solid var(--accent-color);
-  letter-spacing: 1px;
-  height: 100%;
-  cursor: pointer;
+	border: 1px solid var(--accent-color);
+	letter-spacing: 1px;
+	height: 100%;
+	cursor: pointer;
 }
 
 /******************************************** About section styles **********************************/
 
 .about {
-  position: relative;
-  height: 100vh;
-  display: inline-block;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  width: 100%;
+	position: relative;
+	height: 100vh;
+	display: inline-block;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	width: 100%;
 }
 
 .about-heading {
-  position: relative;
-  font-size: 6em;
-  letter-spacing: 10px;
-  border-bottom: 7px solid var(--accent-color);
-  font-family: 'Bebas Neue', cursive;
-  color: var(--text-color);
+	position: relative;
+	font-size: 6em;
+	letter-spacing: 10px;
+	border-bottom: 7px solid var(--accent-color);
+	font-family: 'Bebas Neue', cursive;
+	color: var(--text-color);
 }
 
 .about-body {
-  position: relative;
-  width: 80%;
-  font-family: 'Bebas Neue', cursive;
-  letter-spacing: 4px;
-  font-size: 1.5em;
-  padding: 0;
-  margin: 10px 0;
-  color: var(--text-color);
+	position: relative;
+	width: 80%;
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 4px;
+	font-size: 1.5em;
+	padding: 0;
+	margin: 10px 0;
+	color: var(--text-color);
 }
 
 /******************************************** Footer styles **********************************/
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: var(--text-color);
-  max-width: 2000px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: var(--text-color);
+	max-width: 2000px;
 }
 
 .iconCont {
-  margin: 20px 20px 0px 20px;
-  padding: 20px;
-  width: 50%;
-  display: flex;
-  justify-content: space-evenly;
+	margin: 20px 20px 0px 20px;
+	padding: 20px;
+	width: 50%;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .footer-copyright {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .footer-copyright p {
-  margin: 0;
-  font-weight: bold;
-  letter-spacing: 1px;
+	margin: 0;
+	font-weight: bold;
+	letter-spacing: 1px;
 }
 
 .footer-copyright p:nth-child(2) {
-  margin-bottom: 20px;
-  
+	margin-bottom: 20px;
 }
 
 /******************************************** Media Queries **********************************/
 
 /* Navbar media queries */
 
-
-
 @media (max-width: 1950px) {
-  #navbarSupportedContent {
-    position: relative;
-    left: 70%;
-  }
+	#navbarSupportedContent {
+		position: relative;
+		left: 70%;
+	}
 }
 
 /* Landing page media queries */
 
 @media (max-width: 769px) {
-  .landing h1  {
-    position: relative;
-    font-size: 4em;
-    letter-spacing: 10px;
-    padding: 0;
-    margin: 0;
-    font-family: 'Bebas Neue', cursive;
-    color: var(--text-color);
-    
-  }
-  
-  .landing h3 {
-    position: relative;
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 6px;
-    font-size: 1.75em;
-    padding: 0;
-    margin: 5px;
-    color: var(--text-color);
-  }
+	.landing h1 {
+		position: relative;
+		font-size: 4em;
+		letter-spacing: 10px;
+		font-family: 'Bebas Neue', cursive;
+		color: var(--text-color);
+	}
 
-  .side {
-    margin-bottom: 20px;
-  }
+	.landing h3 {
+		position: relative;
+		font-family: 'Bebas Neue', cursive;
+		letter-spacing: 6px;
+		font-size: 1.75em;
+		padding: 0;
+		margin: 5px;
+		color: var(--text-color);
+	}
+
+	.side {
+		margin-bottom: 20px;
+	}
 }
 
 @media (max-width: 300px) {
-  .landing h1  {
-    position: relative;
-    font-size: 3em;
-    letter-spacing: 10px;
-    padding: 0;
-    margin: 0;
-    font-family: 'Bebas Neue', cursive;
-    color: var(--text-color);
-    
-  }
+	.landing h1 {
+		position: relative;
+		font-size: 3em;
+		letter-spacing: 10px;
+		padding: 0;
+		margin: 0;
+		font-family: 'Bebas Neue', cursive;
+		color: var(--text-color);
+	}
 
-  .about-body {
-    font-size: 1.1em;
-  }
+	.about-body {
+		font-size: 1.1em;
+	}
 
-  .about-heading {
-    font-size: 4.5em;
-  }
-  
-  .landing h3 {
-    position: relative;
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 6px;
-    font-size: 1.2em;
-    padding: 0;
-    margin: 5px;
-    color: var(--text-color);
-  }
+	.about-heading {
+		font-size: 4.5em;
+	}
+
+	.landing h3 {
+		position: relative;
+		font-family: 'Bebas Neue', cursive;
+		letter-spacing: 6px;
+		font-size: 1.2em;
+		padding: 0;
+		margin: 5px;
+		color: var(--text-color);
+	}
 }
 
 /* Large screens */
 @media (min-height: 1250px) {
-  .landing {
-    height: 95.5vh;
-  }
+	.landing {
+		height: 95.5vh;
+	}
 }
 
 @media (min-height: 1365px) {
-  .landing {
-    height: 96vh;
-  }
+	.landing {
+		height: 96vh;
+	}
 }
 
 /* Ipad && Ipad pro */
 @media (max-width: 1023px) {
-  .landing {
-    height: 93vh;
-  }
+	.landing {
+		height: 93vh;
+	}
 
-  .navbar-brand {
-    margin-right: 34rem;
-  }
-  .navbar-toggler {
-    margin-left: auto;
-  }
+	.navbar-brand {
+		margin-right: 34rem;
+	}
+	.navbar-toggler {
+		margin-left: auto;
+	}
 }
 
 /* Surface duo */
 @media only screen and (max-width: 540px) {
-  .landing {
-    height: 92.6vh;
-  }
+	.landing {
+		height: 92.6vh;
+	}
 
-  .navbar-brand {
-    margin-right: 20rem;
-  }
+	.navbar-brand {
+		margin-right: 20rem;
+	}
 }
 
 /* Iphone X */
 @media only screen and (max-width: 375px) {
-  .landing {
-    height: 92vh;
-  }
-  .navbar-brand {
-    margin-right: 10rem;
-  }
+	.landing {
+		height: 92vh;
+	}
+	.navbar-brand {
+		margin-right: 10rem;
+	}
 }
 
 /* Galaxy S */
 @media only screen and (max-width: 360px) {
-  .landing {
-    height: 90.6vh;
-  }
+	.landing {
+		height: 90.6vh;
+	}
 }
 
 /* Galaxy fold */
 @media only screen and (max-width: 289px) {
-  .landing {
-    height: 93vh;
-  }
-  .navbar-brand {
-    margin-right: 4rem;
-  }
+	.landing {
+		height: 93vh;
+	}
+	.navbar-brand {
+		margin-right: 4rem;
+	}
 }
 
 /* Sort bar media queries */
 
 @media (min-width: 770px) {
-  .hidden {
-    display: flex;
-  }
+	.hidden {
+		display: flex;
+	}
 }
 
 @media only screen and (min-width: 769px) {
-  #shown {
-    display: none !important;
-  }
-} 
+	#shown {
+		display: none !important;
+	}
+}
 
 /* footer media queries */
 
 @media only screen and (max-width: 760px) {
- .social {
-   width: 45px;
- }
-} 
+	.social {
+		width: 45px;
+	}
+}

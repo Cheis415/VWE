@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>A JavaScript project</title>
+		<title>Firesteed</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -18,10 +18,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
 	<body>
-		<!----------------------- Start of Navbar ---------------------------->
+		<!------------- Start of Navbar ---------------->
+
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div id="home" class="container-fluid">
-				<a class="navbar-brand" >FIRESTEED.</a>
+				<a class="navbar-brand">FIRESTEED.</a>
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -48,32 +49,37 @@
 				</div>
 			</div>
 		</nav>
-		<!--------------------- End of Navbar --------------------->
 
-		<div class="landing" style="background-image: url(./images/pexels-tim-mossholder-2339180.jpg)">
+		<!------------------- End of Navbar ---------------->
+
+		<!------------------- Start of Landing ---------------->
+
+		<div
+			class="landing"
+			style="background-image: url(./images/pexels-tim-mossholder-2339180.jpg)"
+		>
 			<div class="overlay">
 				<h1>FIRESTEED</h1>
-				<h3 class="tagline">The unicorn of wines</h3>
+				<h3 class="tagline">The unicorn of wine</h3>
 			</div>
 		</div>
 
-		<!----------------- Start of sorting section ---------------------->
+		<!------------------- End of Landing ---------------->
+
+		<!------------------- Start of sorting section --------------->
 
 		<div id="smScreen">
-			
 			<div class="hidden-bar sort-bar shown">
-				
-				<button
+				<a
 					id="shown"
-					class="btn shown"
+					class="btn shown sortBtn"
 					data-bs-toggle="offcanvas"
 					href="#offcanvasExample"
 					role="button"
 					aria-controls="offcanvasExample"
 				>
 					Sort By?
-				</button>
-				
+				</a>
 				<a class="sortScroll" href="#smScreen"></a>
 				<div
 					class="offcanvas offcanvas-start"
@@ -81,9 +87,6 @@
 					id="offcanvasExample"
 					aria-labelledby="offcanvasExampleLabel"
 				>
-					
-					
-					
 					<div class="offcanvas-body">
 						<div class="dropdown side">
 							<button
@@ -97,20 +100,12 @@
 							</button>
 							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 								<li>
-									<a
-										id="priceUp"
-										onclick="orderByPriceAsc()"
-										class="dropdown-item"
-										
+									<a onclick="orderByPriceAsc()" class="dropdown-item priceUp"
 										>Low-High
 									</a>
 								</li>
 								<li>
-									<a
-										id="priceDwn"
-										onclick="orderByPriceDesc()"
-										class="dropdown-item"
-									
+									<a onclick="orderByPriceDesc()" class="dropdown-item priceDwn"
 										>High-Low
 									</a>
 								</li>
@@ -120,28 +115,24 @@
 							<button
 								class="btn btn-secondary dropdown-toggle"
 								type="button"
-								id="dropdownMenuButton1"
+								id="dropdownMenuButton2"
 								data-bs-toggle="dropdown"
 								aria-expanded="false"
 							>
 								Vintage
 							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
 								<li>
 									<a
-										id="vintageUp"
 										onclick="orderByVintageAsc()"
-										class="dropdown-item"
-									
-										>Aged-New  
+										class="dropdown-item vintageUp"
+										>Aged-New
 									</a>
 								</li>
 								<li>
 									<a
-										id="vintageDwn"
 										onclick="orderByVintageDesc()"
-										class="dropdown-item"
-									
+										class="dropdown-item vintageDwn"
 										>New-Aged
 									</a>
 								</li>
@@ -151,28 +142,24 @@
 							<button
 								class="btn btn-secondary dropdown-toggle"
 								type="button"
-								id="dropdownMenuButton1"
+								id="dropdownMenuButton3"
 								data-bs-toggle="dropdown"
 								aria-expanded="false"
 							>
 								Varietal
 							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
 								<li>
 									<a
-										id="varietalUp"
 										onclick="orderByVarietalAsc()"
-										class="dropdown-item"
-										
+										class="dropdown-item varietalUp"
 										>A-Z
 									</a>
 								</li>
 								<li>
 									<a
-										id="varietalDwn"
 										onclick="orderByVarietalDesc()"
-										class="dropdown-item"
-										
+										class="dropdown-item varietalDwn"
 										>Z-A
 									</a>
 								</li>
@@ -182,49 +169,44 @@
 							<button
 								class="btn btn-secondary dropdown-toggle"
 								type="button"
-								id="dropdownMenuButton1"
+								id="dropdownMenuButton4"
 								data-bs-toggle="dropdown"
 								aria-expanded="false"
 							>
 								ABV
 							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
 								<li>
-									<a
-										id="abvUp"
-										onclick="orderByAbvAsc()"
-										class="dropdown-item"
-										
+									<a onclick="orderByAbvAsc()" class="dropdown-item abvUp"
 										>Low-High
 									</a>
 								</li>
 								<li>
-									<a
-										id="abvDwn"
-										onclick="orderByAbvDesc()"
-										class="dropdown-item"
+									<a onclick="orderByAbvDesc()" class="dropdown-item abvDwn"
 										>High-Low
 									</a>
 								</li>
 							</ul>
 						</div>
-						
-
-						
-							<img class="sidePic" src="./images/pexels-breakingpic-3044.jpg"/>
-						
-						
+						<img
+							class="sidePic"
+							src="./images/pexels-breakingpic-3044.jpg"
+							alt="pooring glass of wine"
+						/>
 					</div>
 					<button
-					type="button"
-					class="btn-sm text-reset"
-					data-bs-dismiss="offcanvas"
-					aria-label="Close"
-				>Close</button>
+						type="button"
+						class="btn-sm text-reset"
+						data-bs-dismiss="offcanvas"
+						aria-label="Close"
+					>
+						Close
+					</button>
 				</div>
 			</div>
-		
-			<!---- If the screen is below 768px then this section is hidden --------->
+
+			<!----- If the screen is below 768px then this section is hidden ----->
+
 			<div id="sortContainer" class="sort-bar hidden">
 				<a class="btn sortScroll1" href="#sortContainer">Scroll &#9650;</a>
 				<a class="btn sortScroll2 hide" href="#">Scroll &#9660;</a>
@@ -232,27 +214,20 @@
 					<button
 						class="btn btn-secondary dropdown-toggle"
 						type="button"
-						id="dropdownMenuButton1"
+						id="dropdownMenuButton5"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
 					>
 						Price
 					</button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton5">
 						<li>
-							<a
-								id="priceUp"
-								onclick="orderByPriceAsc()"
-								class="dropdown-item"
+							<a onclick="orderByPriceAsc()" class="dropdown-item priceUp"
 								>Low-High
 							</a>
 						</li>
 						<li>
-							<a
-								id="priceDwn"
-								onclick="orderByPriceDesc()"
-								class="dropdown-item"
-								
+							<a onclick="orderByPriceDesc()" class="dropdown-item priceDwn"
 								>High-Low
 							</a>
 						</li>
@@ -262,27 +237,21 @@
 					<button
 						class="btn btn-secondary dropdown-toggle"
 						type="button"
-						id="dropdownMenuButton1"
+						id="dropdownMenuButton6"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
 					>
 						Vintage
 					</button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton6">
 						<li>
-							<a
-								id="vintageUp"
-								onclick="orderByVintageAsc()"
-								class="dropdown-item"
-							>New-Aged
+							<a onclick="orderByVintageAsc()" class="dropdown-item vintageUp"
+								>New-Aged
 							</a>
 						</li>
 						<li>
-							<a
-								id="vintageDwn"
-								onclick="orderByVintageDesc()"
-								class="dropdown-item"
-							>Aged-New
+							<a onclick="orderByVintageDesc()" class="dropdown-item vintageDwn"
+								>Aged-New
 							</a>
 						</li>
 					</ul>
@@ -291,27 +260,23 @@
 					<button
 						class="btn btn-secondary dropdown-toggle"
 						type="button"
-						id="dropdownMenuButton1"
+						id="dropdownMenuButton7"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
 					>
 						Varietal
 					</button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
 						<li>
-							<a
-								id="varietalUp"
-								onclick="orderByVarietalAsc()"
-								class="dropdown-item"
-							>A-Z
+							<a onclick="orderByVarietalAsc()" class="dropdown-item varietalUp"
+								>A-Z
 							</a>
 						</li>
 						<li>
 							<a
-								id="varietalDwn"
 								onclick="orderByVarietalDesc()"
-								class="dropdown-item"
-							>Z-A
+								class="dropdown-item varietalDwn"
+								>Z-A
 							</a>
 						</li>
 					</ul>
@@ -320,28 +285,20 @@
 					<button
 						class="btn btn-secondary dropdown-toggle"
 						type="button"
-						id="dropdownMenuButton1"
+						id="dropdownMenuButton8"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
 					>
 						ABV
 					</button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton8">
 						<li>
-							<a
-								id="abvUp"
-								onclick="orderByAbvAsc()"
-								class="dropdown-item"
-								href=""
+							<a onclick="orderByAbvAsc()" class="dropdown-item abvUp" href=""
 								>Low-High
 							</a>
 						</li>
 						<li>
-							<a
-								id="abvDwn"
-								onclick="orderByAbvDesc()"
-								class="dropdown-item"
-								href=""
+							<a onclick="orderByAbvDesc()" class="dropdown-item abvDwn" href=""
 								>High-Low
 							</a>
 						</li>
@@ -349,29 +306,57 @@
 				</div>
 			</div>
 		</div>
-			<!---------------------- End of sort section ----------------------->
+
+		<!------------ End of sort section ------------>
+
 		<div id="cardsContainer"></div>
-		<div id="about" class="about" style="background-image: url(./images/pexels-tim-mossholder-2339180.jpg)">
+		<div
+			id="about"
+			class="about"
+			style="background-image: url(./images/pexels-tim-mossholder-2339180.jpg)"
+		>
 			<div class="overlay">
 				<h1 class="about-heading">About</h1>
-			  <p class="about-body">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quas doloremque recusandae molestiae, sit ipsum quis impedit atque qui quae quam dolorem quasi, dolor veniam nemo obcaecati distinctio cumque fugiat quod cupiditate? Nostrum sapiente maiores natus nisi velit soluta adipisci iusto, rerum reiciendis facere eos accusamus laudantium dolorem impedit illum eaque labore, ipsum quos temporibus.
+				<p class="about-body">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quas
+					doloremque recusandae molestiae, sit ipsum quis impedit atque qui quae
+					quam dolorem quasi, dolor veniam nemo obcaecati distinctio cumque
+					fugiat quod cupiditate? Nostrum sapiente maiores natus nisi velit
+					soluta adipisci iusto, rerum reiciendis facere eos accusamus
+					laudantium dolorem impedit illum eaque labore, ipsum quos temporibus.
 				</p>
 			</div>
-			<footer id="footer" class="footer">
-				<div class="iconCont">
-					<img src="./images/icons8-facebook-96.png" alt="facebook logo" class="social" />
-					<img src="./images/icons8-instagram-96.png" alt="instagram logo" class="social" />
-					<img src="./images/icons8-pinterest-96.png" alt="pinterest logo" class="social" />
-					<img src="./images/icons8-snapchat-96.png" alt="snapchat logo" class="social" />
-					</div>
-					<div class="footer-copyright">
-						<p class="footer-copyright-paragraph">
-							&copy;Firesteed. Winery "FIRESTEED". All Rights Reserved
-						</p>
-						<p class="warning">Must be 21 or older</p>
-					</div>
-			</footer>
+		</div>
+		<footer id="footer" class="footer">
+			<div class="iconCont">
+				<img
+					src="./images/icons8-facebook-96.png"
+					alt="facebook logo"
+					class="social"
+				/>
+				<img
+					src="./images/icons8-instagram-96.png"
+					alt="instagram logo"
+					class="social"
+				/>
+				<img
+					src="./images/icons8-pinterest-96.png"
+					alt="pinterest logo"
+					class="social"
+				/>
+				<img
+					src="./images/icons8-snapchat-96.png"
+					alt="snapchat logo"
+					class="social"
+				/>
+			</div>
+			<div class="footer-copyright">
+				<p class="footer-copyright-paragraph">
+					&copy;Firesteed. Winery "FIRESTEED". All Rights Reserved
+				</p>
+				<p class="warning">Must be 21 or older</p>
+			</div>
+		</footer>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
